@@ -1,0 +1,9 @@
+/BTController/
+/I2CServoDriver/
+/LCDFactory/
+/core/
+/libraries/
+/makefile
+/objects.mk
+/sources.mk
+/subdir.mk
