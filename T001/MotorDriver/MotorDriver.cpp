@@ -40,7 +40,7 @@ void MotorDriver::drive(int8_t speed) {
 	}
 
 	s = (s < 0)?-1*s:s;
-	OCR0A = s * 85 // (85 = 255/3).
+	OCR0A = s * 85; // (85 = 255/3).
 }
 
 
