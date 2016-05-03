@@ -4,10 +4,12 @@
 #include "I2CServoDriver/I2CServoDriver.h"
 #include "BTController/BTController.h"
 #include "LCDFactory/LCDDisplay.h"
+#include "MotorDriver/MotorDriver.h"
 
 LCDDisplay lcd;
 I2CServoDriver servoDriver(0x10);
 BTController btController(11, 10);
+MotorDriver motorDriver;
 
 void setup() {
 	Serial.begin(9600);
@@ -38,9 +40,13 @@ void loop() {
 		BTControllerAngles& angles = btController.getAngles();
 
 		servoDriver.turn(angles.turn);
+		motorDriver.drive(angles.forward);
+
 		lcd.setCursor(0,1);
 		lcd.print("T:");
 		lcd.print(angles.turn);
+		lcd.print(" D:");
+		lcd.print(angles.forward);
 		lcd.print("  ");
 	}
 
