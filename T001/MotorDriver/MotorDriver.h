@@ -8,6 +8,7 @@
 #ifndef MOTORDRIVER_MOTORDRIVER_H_
 #define MOTORDRIVER_MOTORDRIVER_H_
 
+#include "arduino.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <math.h>

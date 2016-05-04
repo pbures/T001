@@ -14,6 +14,7 @@ MotorDriver motorDriver;
 void setup() {
 	Serial.begin(9600);
 	Wire.begin();
+	motorDriver.init();
 
 	Serial.println("T001 Started.");
 
